@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<!-- Esto es un comentario -->
+<!-- Lo que queremos... -->
+<html lang="es">
+    <head>
+        <title>Tienda en línea</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Welcome"> 
+        <meta name="keywords" content="TechShop, html5, css">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header id="encabezado"> <!-- El browser entiende que es un encabezado -->
+            <h1>TechShop</h1>
+        </header> <!-- Sémanticamente html5mle indica al browser que -->
+        <nav id="menu">
+            <a href="ejemplo5.html">Back</a>
+            <a href="index.html">Home</a>
+            <a href="ejemplo2.html">Next</a> 
+        </nav>
+
+        <aside id="barralateral">
+            <h2>Últimas noticias</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>Hagase SOCIO</h3>
+            <form action="#">
+                <table>
+                    <tr> <!-- Pedimos el Nombre -->
+                        <td><label>Nombre</label></td>
+                        <td><input type="text" name="nombre" value="" size="30"></td>
+                    </tr>
+                                       
+                    <tr> <!-- Pedimos el Correo -->
+                        <td><label>Correo</label></td>
+                        <td><input type="email" name="correo" value="" size="15"></td>
+                    </tr>
+                                        
+                    <tr> <!-- Pedimos el Teléfono -->
+                        <td><label>Celular</label></td>
+                        <td><input type="tel" name="telefono" value="" size="8"></td>
+                    </tr>
+                                        
+                    <tr> <!-- Botón Registrarse -->
+                        <td></td>
+                        <td><input type="submit" value="Registrarse" /></td>
+                    </tr>
+                </table>
+            </form>
+        </aside>
+
+        <section id="contenido">
+            <h2>Ejemplos varios</h2>
+            <article>
+              
+                <form action="#">
+                    <label>button: </label><input type="button" name="campo01" value="buttton"/><br>
+                    <label>checkbox: </label><input type="checkbox" name="campo02" value="Está de acuerdo"/><br>
+                    <label>color: </label><input type="color" name="campo03"/><br>
+                    
+                    <label>date: </label><input type="date" name="campo04"/><br>
+                    <label>date-local: </label><input type="datetime-local" name="campo05"/><br>
+                    <label>email: </label><input type="email" name="campo06"/><br>
+                    
+                    <label>file: </label><input type="file" name="campo07"/><br>
+                    <label>hidden: </label><input type="hidden" name="campo08" value="ISP-500"/><br>
+                    <label>search: </label><input type="search" name="campo09"/><br>
+                    
+                    <label>submit: </label><input type="submit" name="campo10"/><br>
+                    <label>tel: </label><input type="tel" name="campo11"/><br>
+                    <label>text: </label><input type="text" placeholder="Esto es un texto" name="campo12" maxlength="10"/><br>
+                    
+                    <label>time: </label><input type="time" name="campo13"/><br>
+                    <label>url: </label><input type="url" name="campo14"/><br>
+                    <label>week: </label><input type="week" name="campo15"/><br>
+                    
+                    <label>month: </label><input type="month" name="campo16"/><br>
+                    <label>number: </label><input type="number" name="campo17" max="25" min="10" value="18"/><br>
+                    <label>password: </label><input type="password" name="campo18"/><br>
+                                        
+                    <label>radio: </label><input type="radio" name="campo19"/><br>
+                    <label>range: </label><input type="range" name="campo20" /><br>
+                    <label>reset: </label><input type="reset" name="campo21"/><br>
+                    
+                </form>
+            </article>
+        </section>
+        <footer id="piepagina">Derechos Reservados &COPY; tel: <address style="display: inline"> +506 8802-7067 </address> </footer>
+    </body>
+</html>

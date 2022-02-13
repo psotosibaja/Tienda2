@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<!-- Esto es un comentario -->
+<!-- Lo que queremos... -->
+<html lang="es">
+    <head>
+        <title>Tienda en línea</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Welcome"> 
+        <meta name="keywords" content="TechShop, html5, css">
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header class="header"> <!-- El browser entiende que es un encabezado -->
+            
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">TechShop</a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a href="ejemplo5.html" class="nav-menu-link nav-link">&LeftTriangleBar;</a></li>
+                    <li class="nav-menu-item"><a href="ejemplo2.html" class="nav-menu-link nav-link">&RightTriangleBar;</a></li>
+                    <li class="nav-menu-item"><a href="audios.html" class="nav-menu-link nav-link">Audios</a></li>
+                    <li class="nav-menu-item"><a href="iframes.html" class="nav-menu-link nav-link">iFrames</a></li>
+                    <li class="nav-menu-item"><a href="formulario.html" class="nav-menu-link nav-link">Form</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <aside id="barralateral">
+            <h2>Últimas noticias</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>Hagase SOCIO</h3>
+            <form action="#">
+                <table>
+                    <tr> <!-- Pedimos el Nombre -->
+                        <td><label>Nombre</label></td>
+                        <td><input type="text" name="nombre" value="" size="30"></td>
+                    </tr>
+                                       
+                    <tr> <!-- Pedimos el Correo -->
+                        <td><label>Correo</label></td>
+                        <td><input type="email" name="correo" value="" size="15"></td>
+                    </tr>
+                                        
+                    <tr> <!-- Pedimos el Teléfono -->
+                        <td><label>Celular</label></td>
+                        <td><input type="tel" name="telefono" value="" size="8"></td>
+                    </tr>
+                                        
+                    <tr> <!-- Botón Registrarse -->
+                        <td></td>
+                        <td><input type="submit" value="Registrarse" /></td>
+                    </tr>
+                </table>
+            </form>
+        </aside>
+
+        <section id="contenido">
+            <h2>Ejemplos varios</h2>
+            <article>
+                <header><h3>Música Celta</h3></header>
+                <figure>
+                    <audio controls>
+                        <source src="audios/musica.mp3" type="audio/mpeg">
+                        El browser no soporta audios de tipo <code>audio</code> tag.
+                    </audio>
+                </figure>
+                <footer>Oriunda de Irlanda</footer>
+            </article>
+            <hr>
+            <article>
+                <header><h3>Trailer de Torpedo</h3></header>
+                <figure>
+                    <video width="320" height="240" controls autoplay muted poster="images/torpedo.jpg">
+                        <source src="videos/torpedo.mp4" type="video/mp4">
+                        El browser videos de tipo <code>video</code> tag.
+                    </video>
+                </figure>
+                <footer>Basada en hechos reales</footer>
+            </article>
+        </section>
+        <footer id="piepagina">Derechos Reservados &COPY; tel: <address style="display: inline"> +506 8802-7067 </address> </footer>
+    </body>
+</html>
