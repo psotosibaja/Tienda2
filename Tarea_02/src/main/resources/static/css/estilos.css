@@ -1,0 +1,100 @@
+
+#encabezado {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8%;
+    width: 100%;
+    background-color: gold;
+    color: darkred;
+}
+
+#encabezado h1 {
+    display: inline;
+}
+
+#menu {
+    
+    position: absolute;
+    top: 8%;
+    left: 0;
+    height: 4%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    
+}
+
+#menu a {
+    background-color: black;
+    color: white;
+    
+}
+
+#menu a:hover {
+    background-color: white;
+    color: black;
+    
+}
+
+
+#barralateral {
+    
+    position: absolute;
+    padding: 1%;
+    top: 12%;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color: darkred;
+    color: white;
+    
+}
+
+#contenido {
+    
+    position: absolute;
+    padding: 1%;
+    top: 12%;
+    left: 22%;
+    height: 94%;
+    width: 76%;
+    background-color: white;
+    overflow: auto;  
+}
+
+#contenido article {
+    
+    background-color: white;
+}
+
+#tablaEncabezado {
+    
+    background-color: darkred;
+    color: white;
+}
+
+#tablaDetalle tr:nth-child(odd){
+    
+    background-color: gainsboro;
+    color: black;  
+}
+
+#tablaDetalle tr:nth-child(even){
+    
+    background-color: gainsboro;
+    color: black;  
+}
+
+#piepagina {
+    
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    height: 4%;
+    width: 100%;
+    background-color: gold;
+    text-align: center;
+}
+
