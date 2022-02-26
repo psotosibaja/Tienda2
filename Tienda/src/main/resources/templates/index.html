@@ -1,30 +1,45 @@
 <!DOCTYPE html>
-<html xmls:th="http://www.thymeleaf.org">
+<html xmls:th="http://www.thymeleaf.org" 
+      xmlns=""http://www.w3.org/1999/xhtml"">
+
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>Bienvenido</h1>
+        <header th:replace="layout/plantilla :: header"/>
+        <h2>Listado Clientes</h2>
 
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Correo</th>
-                    <th>Teléfono</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="cliente : ${clientes}">
-                    <td th:text="${cliente.nombre}"></td>
-                    <td th:text="${cliente.apellidos}"></td>
-                    <td th:text="${cliente.correo}"></td>
-                    <td th:text="${cliente.telefono}"></td>
-                </tr>
-            </tbody>
-        </table>
+        <a th:href="@{/nuevoCliente}">Nuevo Cliente</a> 
 
+        <div th:if="${clientes != null and !clientes.empty}">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Eliminar</th>
+                        <th>Modificar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="cliente : ${clientes}">
+                        <td th:text="${cliente.nombre}"></td>
+                        <td th:text="${cliente.apellidos}"></td>
+                        <td th:text="${cliente.correo}"></td>
+                        <td th:text="${cliente.telefono}"></td>
+                        <td><a th:href="@{/eliminarCliente/} + ${cliente.idCliente}">Eliminar</a></td>
+                        <td><a th:href="@{/modificarCliente/} + ${cliente.idCliente}">Modificar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div th:if="${clientes == null or clientes.empty}">
+            No tenemos clientes que mostrar...
+        </div>
+        <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>
