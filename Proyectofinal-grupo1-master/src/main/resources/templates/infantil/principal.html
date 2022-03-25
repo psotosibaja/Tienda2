@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>INFANTIL</title>
+        <meta charset="UTF-8">
+        <meta name ="description" content="Infantilpage">
+        <meta name ="keywords" content="gaming,nintendo,sony,microsoft,html5,css3">
+        <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+       <header th:replace="layout/plantilla :: header" ></header>
+       <div class="texto">
+        <h1 class="login">Login</h1>  
+        <br>
+        <hr>
+        <br>
+        <h2 class="title"> Infantil </h2>
+        <div th:if="${infantils != null and !infantils.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Edad Recomendada</th>
+                    <th>Descripcion</th>
+                    <th>Tipo de garantia</th>
+                    <th>Genero</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="infantil : ${infantils}">
+                    <td th:text="${infantil.nombre}"></td>
+                    <td th:text="${#numbers.formatDecimal(infantil.precio,3,2)}" style="text-align: right"></td>
+                    <td th:text="${infantil.edadrecomendada}"></td>
+                    <td th:text="${infantil.descripcion}"></td>
+                    <td th:text="${infantil.producto.tipogarantia}"></td>
+                    <td th:text="${infantil.videojuego.genero}"></td>
+                    <td><a th:href="@{/infantil/modificar/}+ ${infantil.idInfantil}">Modificar</a></td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    
+       </div>
+       <br>
+       <br>
+       <footer th:replace="layout/plantilla :: footer" ></footer>
+    </body>
+</html>

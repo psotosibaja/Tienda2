@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>PERIFERICOS</title>
+        <meta charset="UTF-8">
+        <meta name ="description" content="Perifericopage">
+        <meta name ="keywords" content="gaming,nintendo,sony,microsoft,html5,css3">
+        <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+       <header th:replace="layout/plantilla :: header" ></header>
+       <div class="texto">
+        <h1 class="login">Login</h1>  
+        <br>
+        <hr>
+        <br>
+        <h2 class="title"> Periferico </h2>
+        <div th:if="${perifericos != null and !perifericos.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Características</th>
+                    <th>Marca</th>
+                    <th>Descripcion</th>
+                    <th>Tipo de garantia</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="periferico : ${perifericos}">
+                    <td th:text="${periferico.nombre}"></td>
+                    <td th:text="${#numbers.formatDecimal(periferico.precio,3,2)}" style="text-align: right"></td>
+                    <td th:text="${periferico.caracteristicas}"></td>
+                    <td th:text="${periferico.marca}"></td>
+                    <td th:text="${periferico.descripcion}"></td>
+                    <td th:text="${periferico.producto.tipogarantia}"></td>
+                    <td><a th:href="@{/periferico/modificar/}+ ${periferico.idPeriferico}">Modificar</a></td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    
+       </div>
+       <br>
+       <br>
+       <footer th:replace="layout/plantilla :: footer" ></footer>
+    </body>
+</html>

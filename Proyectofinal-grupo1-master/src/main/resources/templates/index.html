@@ -1,0 +1,40 @@
+
+<html xmls:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>GoldenGaming</title>
+        <meta charset="UTF-8"/>
+        <meta name ="description" content="GoldenGamingpage">
+        <meta name ="keywords" content="gaming,nintendo,sony,microsoft,html5,css3">
+            <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header" ></header>
+        
+        <div class="texto"> 
+        <a href="@{/other/login}"><h1 class="login">Login</h1></a>
+        <br>
+        <hr>
+        <br>
+        <h2 class="title"> NOVEDADES!!! </h2>
+        </div>
+        <img src="https://generacionxbox.com/wp-content/uploads/2021/08/5.jpg" alt="fh5" width="550"/>
+        <img src="https://z13gameclub.com.br/wp-content/uploads/2021/07/kofxvq12022.jpg" alt="kof" width="550"/>
+        <img src="https://zonaactual.es/wp-content/uploads/2021/06/Elden-Ring.jpg" alt="elden" width="550"/>
+        <img src="https://generacionxbox.com/wp-content/uploads/2020/07/halo-infinite-reveal-portada.jpg" alt="halo" width="550"/>
+        <img src="https://www.tuplaystation.es/wp-content/uploads/2021/05/horizon-2-forbidden-west-2013847.jpg" alt="hfw" width="550"/>
+        <img src="https://generacionxbox.com/wp-content/uploads/2020/06/Ghostwire_Tokyo.jpg" alt="gwt" width="550"/>
+        <hr>
+        <br>   
+        <div class="texto">    
+        <h2 class="title"> OFERTAS DE LOCURA!!! </h2>
+
+        
+        <hr>
+        <br>
+            
+        </div>
+        <footer th:replace="layout/plantilla :: footer" ></footer>
+    
+    </body>
+    
+</html>

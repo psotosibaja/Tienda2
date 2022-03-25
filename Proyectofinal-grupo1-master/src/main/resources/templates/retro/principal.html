@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>RETRO</title>
+        <meta charset="UTF-8">
+        <meta name ="description" content="Retropage">
+        <meta name ="keywords" content="gaming,nintendo,sony,microsoft,html5,css3">
+        <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+       <header th:replace="layout/plantilla :: header" ></header>
+       <div class="texto">
+        <h1 class="login">Login</h1>  
+        <br>
+        <hr>
+        <br>
+        <h2 class="title"> Retro </h2>
+        <div th:if="${retros != null and !retros.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>nombre</th>
+                    <th>precio</th>
+                    <th>Año de salida</th>
+                    <th>Estado</th>
+                    <th>Descripcion</th>
+                    <th>Tipo de garantia</th>
+                    <th>Genero</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="retro : ${retros}">
+                    <td th:text="${retro.nombre}"></td>
+                    <td th:text="${#numbers.formatDecimal(retro.precio,3,2)}" style="text-align: right"></td>
+                    <td th:text="${retro.anodesalida}"></td>
+                    <td th:text="${retro.estado}"></td>
+                    <td th:text="${retro.descripcion}"></td>
+                    <td th:text="${retro.producto.tipogarantia}"></td>
+                    <td th:text="${retro.videojuego.genero}"></td>
+                    <td><a th:href="@{/retro/modificar/}+ ${retro.idRetro}">Modificar</a></td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    
+       </div>
+       <br>
+       <br>
+       <footer th:replace="layout/plantilla :: footer" ></footer>
+    </body>
+</html>

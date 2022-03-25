@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>GOLDENGAIMING</title>
+        <meta charset="UTF-8"/>
+        <link href="../../static/css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:fragment="header"class="header">  
+            <nav class="nav">
+            <a th:href="@{/}" class="logo nav-link">GOLDEN-GAMING</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a th:href="@{/retro/principal}" class="nav-menu-link nav-link">RETRO</a> </li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link">COLECIONISMO</a> </li>
+                <li class="nav-menu-item"><a th:href="@{/infantil/principal}" class="nav-menu-link nav-link">INFANTIL</a> </li>
+                <li class="nav-menu-item"><a th:href="@{/periferico/principal}" class="nav-menu-link nav-link">PERIFERICOS</a> </li>
+                <li class="nav-menu-item"><a th:href="@{/other/mapa}" class="nav-menu-link nav-link">CONTACTANOS</a> </li>
+            </ul>
+            </nav>
+        </header>
+        
+        <footer th:fragment="footer">
+            
+            <p class="pie">&COPY; Pagina generada para el proyecto final del grupo 1 2022.</p>
+            
+        </footer>
+    </body>
+</html>

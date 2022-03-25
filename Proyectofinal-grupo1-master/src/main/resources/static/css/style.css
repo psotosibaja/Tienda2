@@ -1,0 +1,106 @@
+.texto {
+    font-family: sans-serif;
+    color: whitesmoke;
+    padding: 90px 2px 0;
+    top: 35px;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    overflow: auto;        
+}
+body{
+    background-color: dimgray;
+    
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.title{
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bold;
+    line-height: 55px;
+    color: white;
+    text-decoration: none;
+}
+
+.header {
+    background-color: darkgoldenrod;
+    height: 80px;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1700px;
+    margin: 0 auto;
+    
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    
+}
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 90px;
+    width: max-content;
+    
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav-menu-link:hover {
+    background-color: gold;
+    transition: 1s;
+    font-size: 20px;
+    
+}
+.login {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 30px 430px;
+    line-height: 25px;
+    background-color: goldenrod;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: whitesmoke;
+    position: fixed;
+    
+    left: 1250px;
+}
+.login:hover {
+    background-color: gold;
+    transition: 1s;
+}
+
+.pie {
+color: whitesmoke;
+font-size: 14px;
+font-style: italic;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.form{
+    font-size: 18px;
+    
+}
