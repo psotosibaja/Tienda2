@@ -18,7 +18,6 @@ public class Categoria implements Serializable {
     private String descripcion;
     private boolean activo;
 
-    private double limite;
  
 
     public Categoria() {
