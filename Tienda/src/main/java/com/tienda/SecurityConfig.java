@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+
 @Configuration //archivos de configuracion
 @EnableWebSecurity //advierte que esta clase tiene que ver son la seguridad
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
